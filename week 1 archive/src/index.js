@@ -5,8 +5,7 @@ const movies = [
   { title: "Lord of the Rings", durationMinutes: 178, genre: "Fantasy" },
   { title: "Up", durationMinutes: 96, genre: "Animation" },
 ];
-console.log("🚀 ~ movies:", movies);
-
+console.log(durationMinutes);
 //function
 function formatMovieTimes(movies) {
   return movies.map(({ durationMinutes }) => {

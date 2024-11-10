@@ -6,6 +6,7 @@ const movies = [
   { title: "Up", durationMinutes: 96, genre: "Animation" },
 ];
 console.log(durationMinutes);
+
 //function
 function formatMovieTimes(movies) {
   return movies.map(({ durationMinutes }) => {
@@ -13,23 +14,10 @@ function formatMovieTimes(movies) {
     const hours = Math.floor(durationMinutes / 60);
     //get the remaining mins w/ "%"
     const remainingMinutes = durationMinutes % 60;
-
-    //longer than 120mins? >> add emoji
-
     const formattedTime = hours + "h" + remainingMinutes + "m";
-
-    //long way (legacy)
-    /* if (durationMinutes > 120) {
-       return formattedTime + "⏰";
-     }
-    return formattedTime;
-    */
-
-    //short way
     return durationMinutes > 120 ? formattedTime + "⏰" : formattedTime;
   });
 }
-
 //renames function
 const formattedTimes = formatMovieTimes(movies);
 //echo
